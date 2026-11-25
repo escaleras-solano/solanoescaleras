@@ -30,14 +30,14 @@
   --green:#128c4b; --green-bright:#25d366; --green-dark:#0f7a3e; --green-ink:#ffffff;
   --radius:20px; --shadow:0 6px 24px rgba(28,32,28,.06); --shadow-sm:0 2px 10px rgba(28,32,28,.05);
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:96px;scroll-padding-bottom:130px}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:150px;scroll-padding-bottom:130px}
 body{margin:0;font-family:"Barlow",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block} a{color:inherit}
 ::selection{background:var(--yellow);color:var(--yellow-ink)}
 :focus{outline:none}
 :focus-visible{outline:3px solid var(--yellow-border);outline-offset:3px;border-radius:6px}
 button,[role="button"],select,summary,input{ min-height:48px }
-a,button,input,select,summary,[role="button"]{scroll-margin-top:110px;scroll-margin-bottom:150px}
+a,button,input,select,summary,[role="button"]{scroll-margin-top:160px;scroll-margin-bottom:150px}
 .wrap{width:min(1180px,100% - 40px);margin:0 auto}
 @media(max-width:520px){.wrap{width:calc(100% - 32px)} body{font-size:16.5px}
   .topbar{font-size:.88rem} .topbar .wrap{padding:7px 0}
@@ -270,9 +270,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-bet
 footer strong{color:var(--ink)}
 /* floating */
 .wa-float{position:fixed;right:16px;bottom:88px;z-index:50;width:62px;height:62px;border-radius:50%;background:var(--green-bright);display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.18);text-decoration:none;font-size:1.6rem;border:2px solid #fff}
-.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:49;background:#ffffff;border-top:1px solid var(--line);display:none;grid-template-columns:1fr 1fr 1fr;padding:10px;gap:8px;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
+.quickbar{border-top:1px solid var(--line);background:#fff}.quickbar .wrap{display:flex;gap:8px;padding-top:8px;padding-bottom:8px}.qb{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 6px;border-radius:10px;font-weight:800;text-decoration:none;font-size:.93rem;line-height:1.15}.qb-alu{background:#eef1f4;color:var(--ink)}.qb-ace{background:var(--yellow);color:var(--yellow-ink);border:1px solid var(--yellow-border)}.qb-esp{background:var(--ink);color:#fff}@media(max-width:760px){.qb{font-size:.82rem;padding:9px 4px}}.btn-ig{background:var(--ink);color:#fff}.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:49;background:#ffffff;border-top:1px solid var(--line);display:none;grid-template-columns:1fr 1fr 1fr;padding:10px;gap:8px;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
 .mobile-bar a{min-height:52px}
-@media(max-width:760px){.mobile-bar{display:grid;bottom:44px;border-bottom:1px solid var(--line);box-shadow:0 -4px 20px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05)} .wa-float{bottom:126px} html{scroll-padding-bottom:254px} a,button,input,select,summary,[role="button"]{scroll-margin-bottom:254px} }
+@media(max-width:760px){.mobile-bar{display:grid;bottom:0;border-bottom:1px solid var(--line);box-shadow:0 -4px 20px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05)} .wa-float{bottom:88px} html{scroll-padding-bottom:130px} a,button,input,select,summary,[role="button"]{scroll-margin-bottom:150px} }
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:150px;background:var(--dark);color:#fff;padding:13px 18px;border-radius:999px;z-index:60;display:none;font-weight:700;box-shadow:var(--shadow)}
 @media(max-width:520px){
   .hero-grid{padding:12px 0 30px}
@@ -296,6 +296,40 @@ footer strong{color:var(--ink)}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Escaleras Solano","url":"https://solanoescaleras.com/","logo":"https://solanoescaleras.com/img/logo-solano.jpg","email":"escaleras_mex@yahoo.com.mx","telephone":"+52-55-2890-6207","address":{"@type":"PostalAddress","streetAddress":"Av. Andrés Molina Enríquez 907, Col. San Andrés Tetepilco","postalCode":"09440","addressLocality":"Iztapalapa","addressRegion":"Ciudad de México","addressCountry":"MX"},"openingHours":"Mo-Fr 09:00-18:00","sameAs":["https://www.instagram.com/escaleras_solano"]}
 </script>
+
+<style>
+/* ===== Centrado general — previa 25 nov ===== */
+h1,h2,h3{text-align:center}
+.kicker{justify-content:center}
+.sub{margin-inline:auto;text-align:center}
+.lead{margin-inline:auto;text-align:center}
+.hero-copy{text-align:center}
+.hero-ctas{justify-content:center}
+.stat,.card-body,.use-card,.why-item,.step,.feat,.tile-info,.custom-band{text-align:center}
+.split .panel{text-align:center}
+.table-wrap th,.table-wrap td{text-align:center}
+</style>
+
+<style>
+/* ===== Centrado total de textos — previa 25 nov ===== */
+p{text-align:center}
+table th,table td{text-align:center}
+.specs li{justify-content:center;gap:10px}
+.note,.rec{text-align:center}
+footer{text-align:center}
+.field label{text-align:center}
+.card-body .btn,.panel .btn{margin-inline:auto}
+</style>
+
+<style>
+/* ===== Tipografía más pequeña y barras compactas — previa 25 nov ===== */
+html{font-size:15px}
+body{font-size:15.5px}
+@media (max-width:760px){h1{font-size:1.95rem}}
+.qb{font-size:.8rem;padding:7px 5px}
+.mobile-bar{padding:7px;gap:6px}
+.mobile-bar a{min-height:44px;font-size:.88rem}
+</style>
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -307,7 +341,7 @@ footer strong{color:var(--ink)}
 <a href="index.html">Inicio</a><a href="aluminio.html">Aluminio</a><a href="acero.html">Acero</a><a href="especiales.html">Fabricación especial</a><a href="index.html#cotizador">Cotizador</a><a href="index.html#contacto">Contacto</a>
 <a class="btn btn-yellow btn-sm" href="index.html#cotizador">Cotizar ahora →</a>
 </nav>
-</div></header>
+</div><div class="quickbar"><div class="wrap"><a class="qb qb-alu" href="aluminio.html">Plataforma de aluminio</a><a class="qb qb-ace" href="acero.html">Plataforma de acero</a><a class="qb qb-esp" href="especiales.html">Fabricación especial</a></div></div></header>
 
 <main id="inicio">
 <!-- HERO -->
@@ -322,9 +356,6 @@ footer strong{color:var(--ink)}
 <section id="fichas-acero"><div class="wrap">
   <div class="kicker">Fichas técnicas · Acero al carbón</div>
   <h2>Escaleras móviles de acero al carbón</h2>
-  <div class="ficha-chips" aria-label="Resumen de la línea de acero">
-    <span>Acero al carbón</span><span>200 kg en toda la línea</span><span>Desde $15,823.26 + IVA</span><span>Plataforma 60 × 60 cm en todos</span><span>Peldaños de 13.5 cm</span><span>Freno a tu elección: en rueda o de pedal</span><span>Garantía: 6 meses*</span><span>OSHA 1910.23 · ANSI A14.3-2018*</span><span>Hecho en México</span>
-  </div>
   <p class="note" style="margin-top:12px">* La capacidad es de <strong>200 kg en toda la línea</strong> y la garantía de 6 meses aplica a todas las líneas de Solano.</p>
 
   <h3 style="font-family:'Barlow Condensed';font-size:1.9rem;text-transform:uppercase;margin:36px 0 4px;line-height:1.05">Los modelos de acero, en mosaico</h3>

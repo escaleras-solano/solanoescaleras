@@ -30,14 +30,14 @@
   --green:#128c4b; --green-bright:#25d366; --green-dark:#0f7a3e; --green-ink:#ffffff;
   --radius:20px; --shadow:0 6px 24px rgba(28,32,28,.06); --shadow-sm:0 2px 10px rgba(28,32,28,.05);
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:96px;scroll-padding-bottom:130px}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:150px;scroll-padding-bottom:130px}
 body{margin:0;font-family:"Barlow",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block} a{color:inherit}
 ::selection{background:var(--yellow);color:var(--yellow-ink)}
 :focus{outline:none}
 :focus-visible{outline:3px solid var(--yellow-border);outline-offset:3px;border-radius:6px}
 button,[role="button"],select,summary,input{ min-height:48px }
-a,button,input,select,summary,[role="button"]{scroll-margin-top:110px;scroll-margin-bottom:150px}
+a,button,input,select,summary,[role="button"]{scroll-margin-top:160px;scroll-margin-bottom:150px}
 .wrap{width:min(1180px,100% - 40px);margin:0 auto}
 @media(max-width:520px){.wrap{width:calc(100% - 32px)} body{font-size:16.5px}
   .topbar{font-size:.88rem} .topbar .wrap{padding:7px 0}
@@ -76,7 +76,7 @@ nav.main a:hover{background:var(--surface2);text-decoration:underline;text-under
 .hero{background:#ffffff;color:var(--ink);overflow:hidden;border-bottom:1px solid var(--line)}
 .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:36px;align-items:center;padding:48px 0 52px}
 .hero-copy{padding:8px 0}
-.eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--surface-yellow);border:1.5px solid var(--yellow-border);color:#5c4700;padding:8px 14px;border-radius:999px;font-weight:800;font-size:.9rem}
+.eyebrow{display:flex;justify-content:center;text-align:center;gap:8px;align-items:center;background:var(--surface-yellow);border:1.5px solid var(--yellow-border);color:#5c4700;padding:8px 14px;border-radius:999px;font-weight:800;font-size:.9rem}
 .hero h1{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-size:clamp(2.9rem,6vw,4.8rem);line-height:.95;text-transform:uppercase;margin:20px 0 16px;font-weight:800;color:var(--ink);letter-spacing:.01em}
 .hero h1 em{font-style:normal;background:linear-gradient(transparent 62%, var(--yellow) 62%);padding:0 .06em}
 .hero p.lead{font-size:1.22rem;color:var(--muted);max-width:34em;margin:0 0 26px;line-height:1.6}
@@ -270,9 +270,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-bet
 footer strong{color:var(--ink)}
 /* floating */
 .wa-float{position:fixed;right:16px;bottom:88px;z-index:50;width:62px;height:62px;border-radius:50%;background:var(--green-bright);display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.18);text-decoration:none;font-size:1.6rem;border:2px solid #fff}
-.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:49;background:#ffffff;border-top:1px solid var(--line);display:none;grid-template-columns:1fr 1fr 1fr;padding:10px;gap:8px;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
+.quickbar{border-top:1px solid var(--line);background:#fff}.quickbar .wrap{display:flex;gap:8px;padding-top:8px;padding-bottom:8px}.qb{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 6px;border-radius:10px;font-weight:800;text-decoration:none;font-size:.93rem;line-height:1.15}.qb-alu{background:#eef1f4;color:var(--ink)}.qb-ace{background:var(--yellow);color:var(--yellow-ink);border:1px solid var(--yellow-border)}.qb-esp{background:var(--ink);color:#fff}@media(max-width:760px){.qb{font-size:.82rem;padding:9px 4px}}.btn-ig{background:var(--ink);color:#fff}.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:49;background:#ffffff;border-top:1px solid var(--line);display:none;grid-template-columns:1fr 1fr 1fr;padding:10px;gap:8px;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
 .mobile-bar a{min-height:52px}
-@media(max-width:760px){.mobile-bar{display:grid;bottom:44px;border-bottom:1px solid var(--line);box-shadow:0 -4px 20px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05)} .wa-float{bottom:126px} html{scroll-padding-bottom:254px} a,button,input,select,summary,[role="button"]{scroll-margin-bottom:254px} }
+@media(max-width:760px){.mobile-bar{display:grid;bottom:0;border-bottom:1px solid var(--line);box-shadow:0 -4px 20px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05)} .wa-float{bottom:88px} html{scroll-padding-bottom:130px} a,button,input,select,summary,[role="button"]{scroll-margin-bottom:150px} }
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:150px;background:var(--dark);color:#fff;padding:13px 18px;border-radius:999px;z-index:60;display:none;font-weight:700;box-shadow:var(--shadow)}
 @media(max-width:520px){
   .hero-grid{padding:12px 0 30px}
@@ -296,6 +296,40 @@ footer strong{color:var(--ink)}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Escaleras Solano","url":"https://solanoescaleras.com/","logo":"https://solanoescaleras.com/img/logo-solano.jpg","email":"escaleras_mex@yahoo.com.mx","telephone":"+52-55-2890-6207","address":{"@type":"PostalAddress","streetAddress":"Av. Andrés Molina Enríquez 907, Col. San Andrés Tetepilco","postalCode":"09440","addressLocality":"Iztapalapa","addressRegion":"Ciudad de México","addressCountry":"MX"},"openingHours":"Mo-Fr 09:00-18:00","sameAs":["https://www.instagram.com/escaleras_solano"]}
 </script>
+
+<style>
+/* ===== Centrado general — previa 25 nov ===== */
+h1,h2,h3{text-align:center}
+.kicker{justify-content:center}
+.sub{margin-inline:auto;text-align:center}
+.lead{margin-inline:auto;text-align:center}
+.hero-copy{text-align:center}
+.hero-ctas{justify-content:center}
+.stat,.card-body,.use-card,.why-item,.step,.feat,.tile-info,.custom-band{text-align:center}
+.split .panel{text-align:center}
+.table-wrap th,.table-wrap td{text-align:center}
+</style>
+
+<style>
+/* ===== Centrado total de textos — previa 25 nov ===== */
+p{text-align:center}
+table th,table td{text-align:center}
+.specs li{justify-content:center;gap:10px}
+.note,.rec{text-align:center}
+footer{text-align:center}
+.field label{text-align:center}
+.card-body .btn,.panel .btn{margin-inline:auto}
+</style>
+
+<style>
+/* ===== Tipografía más pequeña y barras compactas — previa 25 nov ===== */
+html{font-size:15px}
+body{font-size:15.5px}
+@media (max-width:760px){h1{font-size:1.95rem}}
+.qb{font-size:.8rem;padding:7px 5px}
+.mobile-bar{padding:7px;gap:6px}
+.mobile-bar a{min-height:44px;font-size:.88rem}
+</style>
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -307,14 +341,14 @@ footer strong{color:var(--ink)}
 <a href="index.html">Inicio</a><a href="aluminio.html">Aluminio</a><a href="acero.html">Acero</a><a href="especiales.html">Fabricación especial</a><a href="index.html#cotizador">Cotizador</a><a href="index.html#contacto">Contacto</a>
 <a class="btn btn-yellow btn-sm" href="index.html#cotizador">Cotizar ahora →</a>
 </nav>
-</div></header>
+</div><div class="quickbar"><div class="wrap"><a class="qb qb-alu" href="aluminio.html">Plataforma de aluminio</a><a class="qb qb-ace" href="acero.html">Plataforma de acero</a><a class="qb qb-esp" href="especiales.html">Fabricación especial</a></div></div></header>
 
 <main id="inicio">
 <!-- HERO -->
 <section class="hero" style="padding:0"><div class="wrap"><div class="hero-grid">
   <div class="hero-copy">
-    <span class="eyebrow">★ Fabricantes directos · No intermediarios</span>
-    <h1>La escalera de tu almacén, <em>hecha para durar</em></h1>
+    <span class="eyebrow">★ Fabricantes directos · No intermediarios · Envíos a todo México</span>
+    <h1>Las escaleras de tu almacén<br><em>Hechas para durar</em></h1>
     <p class="lead">Fabricamos escaleras con plataforma de aluminio y acero para almacenes, CEDIS, comercio e industria. Tú nos dices la altura y el uso — nosotros te cotizamos el modelo correcto, sin vueltas.</p>
     <div class="hero-ctas">
       <a class="btn btn-wa" href="#cotizador">Cotizar en 1 minuto</a>
@@ -332,10 +366,6 @@ footer strong{color:var(--ink)}
     <div class="hero-badge"><b>¿No sabes qué altura necesitas?</b><span>Usa la calculadora de abajo: te decimos el modelo recomendado antes de cotizar.</span></div>
   </div>
 </div></div></section>
-
-<div class="trust"><div class="wrap">
-  <strong>Ideal para</strong><span>Almacenes y CEDIS</span><span>Industria</span><span>Comercio</span><span>Mercancías</span><span>Construcción</span><span>Mantenimiento</span>
-</div></div>
 
 <!-- MODELOS -->
 
@@ -358,13 +388,13 @@ footer strong{color:var(--ink)}
           <li><span>Material</span><b>Aluminio anodizado 6063-T5</b></li>
         </ul>
         <p class="price-desde">Desde <b>$13,475.00</b> + IVA<span>Modelo BFPR 1.00 m · Precio sujeto a cambio sin previo aviso</span></p>
-        <a class="btn btn-ghost" href="aluminio.html" style="margin-bottom:10px">Ver fichas por modelo ↓</a>
+        <a class="btn btn-ghost" href="aluminio.html" style="margin-bottom:10px">Ver modelos ↓</a>
         <button class="btn btn-ghost" data-quote="Aluminio">Cotizar aluminio →</button>
       </div>
     </article>
 
     <article class="card">
-      <img src="img/foto-04.jpg" alt="Escalera de plataforma de acero amarilla de Solano en su taller">
+      <img src="img/foto-20.jpg" alt="Escalera de plataforma de acero de 3.50 m de Solano en fondo blanco">
       <div class="card-body">
         <span class="tag">La más pedida</span>
         <h3>Plataforma de acero BFPR</h3>
@@ -377,7 +407,7 @@ footer strong{color:var(--ink)}
           <li><span>Freno</span><b>A tu elección: en rueda o de pedal</b></li>
         </ul>
         <p class="price-desde">Desde <b>$15,823.26</b> + IVA<span>Modelo de 1.25 m · Precio sujeto a cambio sin previo aviso</span></p>
-        <a class="btn btn-ghost" href="acero.html" style="margin-bottom:10px">Ver fichas por modelo ↓</a>
+        <a class="btn btn-ghost" href="acero.html" style="margin-bottom:10px">Ver modelos ↓</a>
         <button class="btn btn-yellow" data-quote="Acero BFPR">Cotizar acero BFPR →</button>
       </div>
     </article>
@@ -444,7 +474,7 @@ footer strong{color:var(--ink)}
       <tbody>
         <tr><td data-l="Característica">Altura de plataforma</td><td data-l="Aluminio"><strong>1.00 a 4.00 m</strong> · 9 modelos BFPR + 3.60 m especial</td><td data-l="Acero BFPR"><strong>0.75 a 5.50 m</strong></td></tr>
         <tr><td data-l="Característica">Capacidad de carga</td><td data-l="Aluminio"><strong>200 kg</strong> en todos los modelos BFPR</td><td data-l="Acero BFPR"><strong>200 kg</strong> en toda la línea</td></tr>
-        <tr><td data-l="Característica">Material / ficha</td><td data-l="Aluminio">Aluminio anodizado 6063-T5 · <a href="aluminio.html"><strong>Ver fichas por modelo ↑</strong></a></td><td data-l="Acero BFPR">Acero al carbón · <a href="acero.html"><strong>Ver fichas por modelo ↑</strong></a></td></tr>
+        <tr><td data-l="Característica">Material / ficha</td><td data-l="Aluminio">Aluminio anodizado 6063-T5 · <a href="aluminio.html"><strong>Ver modelos ↑</strong></a></td><td data-l="Acero BFPR">Acero al carbón · <a href="acero.html"><strong>Ver modelos ↑</strong></a></td></tr>
         <tr><td data-l="Característica">Movilidad</td><td data-l="Aluminio">Ruedas · muy ligera</td><td data-l="Acero BFPR">Ruedas · móvil</td></tr>
         <tr><td data-l="Característica">Mejor para</td><td data-l="Aluminio">Almacén y comercio con movimiento constante</td><td data-l="Acero BFPR">CEDIS, racks altos, alto tráfico y uso continuo en planta</td></tr>
         <tr><td data-l="Característica">Precio desde</td><td data-l="Aluminio"><strong>Desde $13,475.00 + IVA</strong> · modelo 1.00 m</td><td data-l="Acero BFPR"><strong>Desde $15,823.26 + IVA</strong> · modelo 1.25 m</td></tr>
@@ -580,6 +610,8 @@ footer strong{color:var(--ink)}
       <a class="btn btn-wa" style="width:100%" href="https://wa.me/525515116648?text=Hola%2C%20quiero%20cotizar%20una%20escalera%20con%20plataforma." target="_blank" rel="noopener">Cotizar por WhatsApp · 55 1511 6648</a>
       <div style="height:10px"></div>
       <a class="btn btn-yellow" style="width:100%" href="#cotizador">Usar el cotizador en 3 pasos</a>
+      <div style="height:10px"></div>
+      <a class="btn btn-ig" style="width:100%" href="https://www.instagram.com/escaleras_solano" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg> Instagram · @escaleras_solano</a>
       <p class="note" style="margin-top:12px">Tip para cotizar más rápido: ten a la mano la altura de tu rack y si la escalera se va a mover todos los días.</p>
     </div>
   </div>
