@@ -12,6 +12,7 @@
   gtag('config', 'AW-847568524');
 </script>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="description" content="Escaleras Solano — Fabricantes de escaleras de aluminio y acero con plataforma para almacén, comercio e industria. Más de 55 años en CDMX. Cotiza en 1 minuto.">
@@ -85,12 +86,12 @@ nav.main a:hover{background:var(--surface2);text-decoration:underline;text-under
 .stat{background:#fff;border:1px solid var(--line);border-top:4px solid var(--yellow);border-radius:14px;padding:14px 12px 12px;box-shadow:var(--shadow-sm)}
 .stat b{font-family:"Barlow Condensed";font-size:1.7rem;line-height:1;display:block;color:var(--ink)}
 .stat span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block;margin-top:4px;font-weight:600}
-.hero-media{position:relative;min-height:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#ffffff;display:flex;flex-direction:column}
-.hero-media img{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
-.hero-media::after{content:none}
-.hero-badge{position:relative;z-index:2;left:auto;right:auto;bottom:auto;background:#ffffff;color:var(--ink);padding:14px 16px 16px;border-radius:0;box-shadow:none;border:0;border-top:1px solid var(--line);max-width:none}
+.hero-media{position:relative;min-height:440px;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface2)}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(255,255,255,.18) 100%)}
+.hero-badge{position:absolute;z-index:2;left:16px;right:16px;bottom:16px;background:#ffffff;color:var(--ink);padding:16px 18px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.14);border:1px solid var(--line);max-width:420px}
 .hero-badge b{display:block;font-size:1.02rem;line-height:1.3} .hero-badge span{font-size:.95rem;color:var(--muted);line-height:1.45;display:block;margin-top:3px}
-@media(max-width:860px){ .hero-grid{grid-template-columns:1fr;gap:24px;padding:32px 0 36px} .hero-copy{padding:0} .hero-media{min-height:0} .hero-stats{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:860px){ .hero-grid{grid-template-columns:1fr;gap:24px;padding:32px 0 36px} .hero-copy{padding:0} .hero-media{min-height:320px} .hero-stats{grid-template-columns:repeat(2,1fr)} }
 /* trust */
 .trust{background:#ffffff;border-bottom:1px solid var(--line)}
 .trust .wrap{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:18px 0}
@@ -370,15 +371,15 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="logo" href="https://solanoescaleras.com/previo/" aria-label="Escaleras Solano">
+  <a class="logo" href="index.html" aria-label="Escaleras Solano">
     <img class="logo-img" src="https://solanoescaleras.com/img/foto-01.jpg" alt="Logo de Escaleras Solano" width="54" height="54">
     <span><b>Escaleras Solano</b><span class="logo-sub">Aluminio · Acero</span></span>
   </a>
   <nav class="main" aria-label="Principal">
-<a href="https://solanoescaleras.com/previo/">Inicio</a><a href="https://solanoescaleras.com/aluminio.html">Aluminio</a><a href="https://solanoescaleras.com/acero.html">Acero</a><a href="https://solanoescaleras.com/especiales.html">Fabricación especial</a><a href="index.html#cotizador">Cotizador</a><a href="index.html#contacto">Contacto</a>
+<a href="index.html">Inicio</a><a href="aluminio.html">Aluminio</a><a href="acero.html">Acero</a><a href="especiales.html">Fabricación especial</a><a href="index.html#cotizador">Cotizador</a><a href="index.html#contacto">Contacto</a>
 <a class="btn btn-yellow btn-sm" href="index.html#cotizador">Cotizar ahora →</a>
 </nav>
-</div><div class="quickbar"><div class="wrap"><a class="qb qb-alu" href="https://solanoescaleras.com/aluminio.html">Plataforma de aluminio</a><a class="qb qb-ace" href="https://solanoescaleras.com/acero.html">Plataforma de acero</a><a class="qb qb-esp" href="https://solanoescaleras.com/especiales.html">Fabricación especial</a></div></div></header>
+</div><div class="quickbar"><div class="wrap"><a class="qb qb-alu" href="aluminio.html">Plataforma de aluminio</a><a class="qb qb-ace" href="acero.html">Plataforma de acero</a><a class="qb qb-esp" href="especiales.html">Fabricación especial</a></div></div></header>
 
 <main id="inicio">
 <!-- HERO -->
@@ -399,7 +400,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
     </div>
   </div>
   <div class="hero-media">
-    <img src="https://solanoescaleras.com/img/foto-02.jpg" alt="Varias escaleras de plataforma de acero Solano en una bodega">
+    <img src="https://solanoescaleras.com/img/foto-47.jpg" alt="Escalera de plataforma de acero de Solano en una bodega">
     <div class="hero-badge"><b>¿No sabes qué altura necesitas?</b><span>Usa la calculadora de abajo: te decimos el modelo recomendado antes de cotizar.</span></div>
   </div>
 </div></div></section>
@@ -425,7 +426,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
           <li><span>Material</span><b>Aluminio anodizado 6063-T5</b></li>
         </ul>
         <p class="price-desde">Desde <b>$13,475.00</b> + IVA<span>Modelo BFPR 1.00 m · Precio sujeto a cambio sin previo aviso</span></p>
-        <a class="btn btn-ghost" href="https://solanoescaleras.com/aluminio.html" style="margin-bottom:10px">Ver modelos ↓</a>
+        <a class="btn btn-ghost" href="aluminio.html" style="margin-bottom:10px">Ver modelos ↓</a>
         <button class="btn btn-ghost" data-quote="Aluminio">Cotizar aluminio →</button>
       </div>
     </article>
@@ -444,7 +445,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
           <li><span>Freno</span><b>A tu elección: en rueda o de pedal</b></li>
         </ul>
         <p class="price-desde">Desde <b>$15,823.26</b> + IVA<span>Modelo de 1.25 m · Precio sujeto a cambio sin previo aviso</span></p>
-        <a class="btn btn-ghost" href="https://solanoescaleras.com/acero.html" style="margin-bottom:10px">Ver modelos ↓</a>
+        <a class="btn btn-ghost" href="acero.html" style="margin-bottom:10px">Ver modelos ↓</a>
         <button class="btn btn-yellow" data-quote="Acero BFPR">Cotizar acero BFPR →</button>
       </div>
     </article>
@@ -461,7 +462,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
           <li><span>Garantía</span><b>6 meses</b></li>
         </ul>
         <p class="price-desde">Precio <b>a cotizar</b><span>Según tu proyecto · Precio sujeto a cambio sin previo aviso</span></p>
-        <a class="btn btn-ghost" href="https://solanoescaleras.com/especiales.html" style="margin-bottom:10px">Ver fabricación especial →</a>
+        <a class="btn btn-ghost" href="especiales.html" style="margin-bottom:10px">Ver fabricación especial →</a>
         <a class="btn btn-yellow" href="https://wa.me/525515116648?text=Hola%2C%20quiero%20cotizar%20una%20escalera%20de%20fabricaci%C3%B3n%20especial." target="_blank" rel="noopener">Cotizar mi proyecto →</a>
       </div>
     </article>
@@ -485,7 +486,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
       <div class="meter"><i id="meterFill"></i></div>
       <div style="display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-top:6px"><span>0.75 m</span><span>5.50 m</span></div>
       <div class="rec" id="recBox"><strong>Recomendación:</strong> Para 2.00 m, la <strong>Acero BFPR</strong> es la opción más pedida en almacenes. Si la mueves a cada rato, compara con aluminio.</div>
-      <img src="https://solanoescaleras.com/img/foto-05.jpg" alt="Escalera BFPR de aluminio alta con ruedas rojas en el taller de Solano" style="border-radius:12px;margin:16px auto 0;aspect-ratio:535/1000;object-fit:cover;width:min(300px,100%)">
+      <img src="https://solanoescaleras.com/img/foto-13.jpg" alt="Escalera BFPR de aluminio de 4.00 m con plataforma, barandales y ruedas rojas — foto real" style="border-radius:12px;margin-top:16px;aspect-ratio:4/3;object-fit:contain;background:#f7f7f4;width:100%">
     </div>
 
     <div class="panel" id="cotizador" aria-label="Cotizador en 3 pasos">
@@ -511,7 +512,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
       <tbody>
         <tr><td data-l="Característica">Altura de plataforma</td><td data-l="Aluminio"><strong>1.00 a 4.00 m</strong> · 9 modelos BFPR + 3.60 m especial</td><td data-l="Acero BFPR"><strong>0.75 a 5.50 m</strong></td></tr>
         <tr><td data-l="Característica">Capacidad de carga</td><td data-l="Aluminio"><strong>200 kg</strong> en todos los modelos BFPR</td><td data-l="Acero BFPR"><strong>200 kg</strong> en toda la línea</td></tr>
-        <tr><td data-l="Característica">Material / ficha</td><td data-l="Aluminio">Aluminio anodizado 6063-T5 · <a href="https://solanoescaleras.com/aluminio.html"><strong>Ver modelos ↑</strong></a></td><td data-l="Acero BFPR">Acero al carbón · <a href="https://solanoescaleras.com/acero.html"><strong>Ver modelos ↑</strong></a></td></tr>
+        <tr><td data-l="Característica">Material / ficha</td><td data-l="Aluminio">Aluminio anodizado 6063-T5 · <a href="aluminio.html"><strong>Ver modelos ↑</strong></a></td><td data-l="Acero BFPR">Acero al carbón · <a href="acero.html"><strong>Ver modelos ↑</strong></a></td></tr>
         <tr><td data-l="Característica">Movilidad</td><td data-l="Aluminio">Ruedas · muy ligera</td><td data-l="Acero BFPR">Ruedas · móvil</td></tr>
         <tr><td data-l="Característica">Mejor para</td><td data-l="Aluminio">Almacén y comercio con movimiento constante</td><td data-l="Acero BFPR">CEDIS, racks altos, alto tráfico y uso continuo en planta</td></tr>
         <tr><td data-l="Característica">Precio desde</td><td data-l="Aluminio"><strong>Desde $13,475.00 + IVA</strong> · modelo 1.00 m</td><td data-l="Acero BFPR"><strong>Desde $15,823.26 + IVA</strong> · modelo 1.25 m</td></tr>
@@ -616,9 +617,9 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
     <details><summary>¿Aluminio o acero, cuál me conviene?</summary><p>Aluminio si la mueves constantemente y quieres ligereza. Acero BFPR si es para CEDIS, racks altos y tráfico pesado: acero al carbón, plataforma de 60 × 60 cm y freno a tu elección — también es la línea para uso continuo en planta o mantenimiento.</p></details>
     <details><summary>¿Pueden fabricar una escalera para un proyecto o una medida especial?</summary><p>Sí. Como somos fabricantes directos, podemos trabajar a la medida de tu proyecto: en acero BFPR fabricamos plataformas de 0.75 m a 5.50 m. Cuéntanos la altura que necesitas, el uso que le vas a dar y qué tan seguido se va a mover, y te recomendamos material, altura y capacidad antes de cotizar.</p></details>
     <details><summary>¿Qué traen para trabajar seguro sobre la plataforma?</summary><p>Plataforma amplia para trabajar con las dos manos libres, barandales de apoyo al subir, bajar y trabajar, peldaños antiderrapantes y ruedas para desplazar la escalera sin cargarla. En el cotizador dinos el uso y la altura, y te confirmamos el modelo que mejor se ajusta a ese trabajo.</p></details>
-    <details><summary>¿Qué modelos BFPR de aluminio hay y cuánto cargan?</summary><p>Son 9 modelos, todos de 200 kg: 1.00 m (3 peldaños + tarima, 60 kg), 1.25 m (4 + tarima, 65 kg), 1.50 m (5 + tarima, 70 kg), 2.00 m (7 + tarima, 70 kg), 2.25 m (8 + tarima, 75 kg), 2.50 m (9 + tarima, 85 kg), 3.25 m (12 + tarima, 110 kg), 3.60 m especial de plataforma libre (13 + tarima, 225 kg) y 4.00 m (15 + tarima, 170 kg). La tabla completa con altura total, base y peso está en la sección <a href="https://solanoescaleras.com/aluminio.html">Fichas BFPR</a>.</p></details>
+    <details><summary>¿Qué modelos BFPR de aluminio hay y cuánto cargan?</summary><p>Son 9 modelos, todos de 200 kg: 1.00 m (3 peldaños + tarima, 60 kg), 1.25 m (4 + tarima, 65 kg), 1.50 m (5 + tarima, 70 kg), 2.00 m (7 + tarima, 70 kg), 2.25 m (8 + tarima, 75 kg), 2.50 m (9 + tarima, 85 kg), 3.25 m (12 + tarima, 110 kg), 3.60 m especial de plataforma libre (13 + tarima, 225 kg) y 4.00 m (15 + tarima, 170 kg). La tabla completa con altura total, base y peso está en la sección <a href="aluminio.html">Fichas BFPR</a>.</p></details>
     <details><summary>¿Qué garantía tienen las escaleras?</summary><p>6 meses contra defectos de fabricación, en todas nuestras líneas. Las BFPR están diseñadas bajo los lineamientos OSHA 1910.23 y ANSI A14.3-2018.</p></details>
-    <details><summary>¿Las escaleras de acero son todas del mismo material?</summary><p>Sí. Según sus fichas técnicas, toda la línea se fabrica en acero al carbón con la misma construcción: plataforma de 60 × 60 cm de lámina antiderrapante cal. 14, peldaños de 13.5 cm, pasamanos de Ø25 mm en ambos lados, ruedas de poliuretano rojo de Ø101.6 mm y pintura alquidálica anticorrosiva gris. Lo que cambia de un modelo a otro son solo las medidas: altura de plataforma, altura total, largo y ancho de la base, peso y número de peldaños. La ficha completa está en la sección <a href="https://solanoescaleras.com/acero.html">Fichas de acero</a>.</p></details>
+    <details><summary>¿Las escaleras de acero son todas del mismo material?</summary><p>Sí. Según sus fichas técnicas, toda la línea se fabrica en acero al carbón con la misma construcción: plataforma de 60 × 60 cm de lámina antiderrapante cal. 14, peldaños de 13.5 cm, pasamanos de Ø25 mm en ambos lados, ruedas de poliuretano rojo de Ø101.6 mm y pintura alquidálica anticorrosiva gris. Lo que cambia de un modelo a otro son solo las medidas: altura de plataforma, altura total, largo y ancho de la base, peso y número de peldaños. La ficha completa está en la sección <a href="acero.html">Fichas de acero</a>.</p></details>
     <details><summary>¿Puedo elegir el tipo de freno en la escalera de acero?</summary><p>Sí: son los mismos modelos y el freno se hace a tu elección — freno manual en las ruedas delanteras giratorias o freno de pedal. El freno de pedal está disponible en todas las alturas; en la ficha del modelo 1.75 m viene especificado así. Dinos cuál prefieres al cotizar.</p></details>
     <details><summary>¿Cuánto cargan las escaleras de acero?</summary><p>200 kg en toda la línea de acero, en todos los modelos, de 0.75 m a 5.50 m.</p></details>
   </div>
@@ -633,9 +634,9 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
       <p class="address"><strong>Escaleras Solano</strong><br>Av. Andrés Molina Enríquez 907<br>Col. San Andrés Tetepilco, Iztapalapa<br>Ciudad de México, C.P. 09440</p>
       <p style="margin-top:16px"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Av.+Andr%C3%A9s+Molina+Enr%C3%ADquez+907+San+Andr%C3%A9s+Tetepilco+Iztapalapa+CDMX" target="_blank" rel="noopener">Cómo llegar en Google Maps →</a></p>
       <img src="https://solanoescaleras.com/img/foto-01.jpg" alt="Logo de Escaleras Solano" style="width:110px;height:110px;border-radius:16px;margin-top:18px;object-fit:cover;border:1px solid var(--line)">
-      <img src="https://solanoescaleras.com/img/foto-22.jpg" alt="Escalera de plataforma de aluminio de Solano en su taller" style="border-radius:14px;margin:14px auto 0;aspect-ratio:3/4;object-fit:cover;width:min(420px,100%)">
+      <img src="https://solanoescaleras.com/img/foto-19.jpg" alt="Escalera de plataforma de acero de Solano en su taller" style="border-radius:14px;margin-top:14px;aspect-ratio:4/3;object-fit:contain;background:#f7f7f4;width:100%">
     </div>
-    <div class="panel" style="text-align:center">
+    <div class="panel">
       <h3>Habla con la fábrica</h3>
       <p>Sin call centers. Te atiende quien fabrica tu escalera.</p>
       <a class="bigphone" href="tel:+525528906207">55 2890 6207</a>
