@@ -85,12 +85,11 @@ nav.main a:hover{background:var(--surface2);text-decoration:underline;text-under
 .stat{background:#fff;border:1px solid var(--line);border-top:4px solid var(--yellow);border-radius:14px;padding:14px 12px 12px;box-shadow:var(--shadow-sm)}
 .stat b{font-family:"Barlow Condensed";font-size:1.7rem;line-height:1;display:block;color:var(--ink)}
 .stat span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block;margin-top:4px;font-weight:600}
-.hero-media{position:relative;min-height:440px;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface2)}
-.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(255,255,255,.18) 100%)}
-.hero-badge{position:absolute;z-index:2;left:16px;right:16px;bottom:16px;background:#ffffff;color:var(--ink);padding:16px 18px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.14);border:1px solid var(--line);max-width:420px}
+.hero-media{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface2)}
+.hero-media img{display:block;width:100%;height:auto}
+.hero-badge{position:static;background:#ffffff;color:var(--ink);padding:16px 18px;border-top:1px solid var(--line)}
 .hero-badge b{display:block;font-size:1.02rem;line-height:1.3} .hero-badge span{font-size:.95rem;color:var(--muted);line-height:1.45;display:block;margin-top:3px}
-@media(max-width:860px){ .hero-grid{grid-template-columns:1fr;gap:24px;padding:32px 0 36px} .hero-copy{padding:0} .hero-media{min-height:320px} .hero-stats{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:860px){ .hero-grid{grid-template-columns:1fr;gap:24px;padding:32px 0 36px} .hero-copy{padding:0} .hero-stats{grid-template-columns:repeat(2,1fr)} }
 /* trust */
 .trust{background:#ffffff;border-bottom:1px solid var(--line)}
 .trust .wrap{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:18px 0}
@@ -263,7 +262,7 @@ details p{color:var(--muted);margin:0 0 16px;line-height:1.65}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:28px}
 @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
 .address{font-size:1.14rem;line-height:1.6}
-.bigphone{font-family:"Barlow Condensed";font-size:2.1rem;line-height:1.15;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--yellow-border);text-decoration-thickness:3px;display:inline-block;padding:4px 0;color:var(--ink)}
+.bigphone{font-family:"Barlow Condensed";font-size:2.1rem;line-height:1.15;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--yellow-border);text-decoration-thickness:3px;display:block;text-align:center;padding:4px 0;color:var(--ink)}
 .bigphone:hover{background:var(--surface-yellow)}
 footer{background:#ffffff;color:var(--muted);padding:36px 0 100px;font-size:.96rem;border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;line-height:1.6}
@@ -399,7 +398,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
     </div>
   </div>
   <div class="hero-media">
-    <img src="img/foto-02.jpg" alt="Varias escaleras de plataforma de acero Solano en una bodega">
+    <img src="img/foto-21.jpg" alt="Escalera de plataforma de acero de Solano en una bodega">
     <div class="hero-badge"><b>¿No sabes qué altura necesitas?</b><span>Usa la calculadora de abajo: te decimos el modelo recomendado antes de cotizar.</span></div>
   </div>
 </div></div></section>
@@ -431,7 +430,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
     </article>
 
     <article class="card">
-      <img src="img/foto-20.jpg" alt="Escalera de plataforma de acero de 3.50 m de Solano en fondo blanco">
+      <img src="img/foto-20.jpg" alt="Escalera de plataforma de acero de 3.50 m de Solano en fondo blanco" style="object-fit:contain;background:#f7f7f4">
       <div class="card-body">
         <span class="tag">La más pedida</span>
         <h3>Plataforma de acero BFPR</h3>
@@ -485,7 +484,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
       <div class="meter"><i id="meterFill"></i></div>
       <div style="display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-top:6px"><span>0.75 m</span><span>5.50 m</span></div>
       <div class="rec" id="recBox"><strong>Recomendación:</strong> Para 2.00 m, la <strong>Acero BFPR</strong> es la opción más pedida en almacenes. Si la mueves a cada rato, compara con aluminio.</div>
-      <img src="img/foto-05.jpg" alt="Escalera BFPR de aluminio alta con ruedas rojas en el taller de Solano" style="border-radius:12px;margin-top:16px;aspect-ratio:16/9;object-fit:cover;width:100%">
+      <img src="img/foto-13.jpg" alt="Escalera BFPR de aluminio de 4.00 m con plataforma, barandales y ruedas rojas — foto real" style="border-radius:12px;margin-top:16px;aspect-ratio:4/3;object-fit:contain;background:#f7f7f4;width:100%">
     </div>
 
     <div class="panel" id="cotizador" aria-label="Cotizador en 3 pasos">
@@ -633,7 +632,7 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
       <p class="address"><strong>Escaleras Solano</strong><br>Av. Andrés Molina Enríquez 907<br>Col. San Andrés Tetepilco, Iztapalapa<br>Ciudad de México, C.P. 09440</p>
       <p style="margin-top:16px"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Av.+Andr%C3%A9s+Molina+Enr%C3%ADquez+907+San+Andr%C3%A9s+Tetepilco+Iztapalapa+CDMX" target="_blank" rel="noopener">Cómo llegar en Google Maps →</a></p>
       <img src="img/foto-01.jpg" alt="Logo de Escaleras Solano" style="width:110px;height:110px;border-radius:16px;margin-top:18px;object-fit:cover;border:1px solid var(--line)">
-      <img src="img/foto-22.jpg" alt="Escalera de plataforma de aluminio de Solano en su taller" style="border-radius:14px;margin-top:14px;aspect-ratio:4/3;object-fit:cover;width:100%">
+      <img src="img/foto-19.jpg" alt="Escalera de plataforma de acero de Solano en su taller" style="border-radius:14px;margin-top:14px;aspect-ratio:4/3;object-fit:contain;background:#f7f7f4;width:100%">
     </div>
     <div class="panel">
       <h3>Habla con la fábrica</h3>
