@@ -670,6 +670,8 @@ h1{font-size:clamp(1.6rem,2.9vw,2.3rem)}
 
 <script>
 var WA_NUMBER = "525515116648";
+var ALT_ALUMINIO = [1.00,1.25,1.50,2.00,2.25,2.50,3.25,3.60,4.00];
+var ALT_ACERO = [0.75,1.00,1.25,1.50,1.75,2.00,2.25,2.50,2.75,3.00,3.25,3.50,3.75,4.00,4.25,4.50,4.75,5.00,5.50];
 var state = { tipo:null, altura:null, uso:null, step:1 };
 var stepsData = [
   null,
@@ -678,13 +680,7 @@ var stepsData = [
     {v:"Plataforma de acero BFPR", d:"0.75 a 5.50 m · acero al carbón · plataforma 60 × 60 cm · freno a tu elección: en rueda o de pedal"},
     {v:"No lo sé, necesito asesoría", d:"Te recomendamos según tu altura y tu uso"}
   ]},
-  { label:"Paso 2 de 3 · ¿Qué altura de plataforma?", key:"altura", choices:[
-    {v:"Hasta 1.00 m", d:"Trabajo bajo, comercio y almacén pequeño"},
-    {v:"1.00 a 2.00 m", d:"La medida más común en almacenes"},
-    {v:"2.00 a 3.00 m", d:"Racks medianos y CEDIS"},
-    {v:"3.00 a 5.50 m", d:"Racks altos — línea de acero BFPR"},
-    {v:"No sé la altura", d:"Te ayudamos a calcularla con la altura de tu rack"}
-  ]},
+  { label:"Paso 2 de 3 · ¿Qué altura de plataforma?", key:"altura", dynAltura:true },
   { label:"Paso 3 de 3 · ¿Para qué la vas a usar?", key:"uso", choices:[
     {v:"Almacén / CEDIS", d:"Picking, inventarios y acomodo de mercancía"},
     {v:"Industria / planta", d:"Mantenimiento y acceso a maquinaria"},
@@ -700,8 +696,15 @@ function renderStep(){
   if(state.step>3){ box.innerHTML=''; sum.style.display='block'; buildSummary(); return; }
   sum.style.display='none';
   var s=stepsData[state.step];
+  var choices=s.choices;
+  if(s.dynAltura){
+    var esAcero = state.tipo==="Plataforma de acero BFPR";
+    var hs = esAcero ? ALT_ACERO : ALT_ALUMINIO;
+    choices = hs.map(function(h){ return {v:h.toFixed(2)+" m", d:"Altura total "+(h+0.90).toFixed(2)+" m"}; });
+    choices.push({v:"No sé la altura", d:"Te ayudamos a calcularla con la altura de tu rack"});
+  }
   var html='<div class="step-label">'+s.label+'</div><div class="choices">';
-  s.choices.forEach(function(c){
+  choices.forEach(function(c){
     var sel = state[s.key]===c.v ? ' sel':'';
     html+='<button type="button" class="choice'+sel+'" data-v="'+c.v.replace(/"/g,'&quot;')+'"><span class="dot"></span><span><b>'+c.v+'</b><span>'+c.d+'</span></span></button>';
   });
